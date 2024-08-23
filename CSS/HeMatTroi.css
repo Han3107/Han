@@ -1,0 +1,584 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-image: url(../IMAGES/new-amp-page-bg.jpg);
+  max-width: 150rem;
+  height: 250rem;
+  background-size: cover;
+  margin: 0 auto;
+  z-index: 100;
+}
+header {
+  background-image: url(../IMAGES/footer-bg-copyrigh1t.png);
+  background-size: cover;
+  background-position-y: top;
+  color: white;
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header section {
+  background-color: #00000088;
+  width: 100%;
+}
+header #tieude {
+  padding-top: 8rem;
+  font-family: "Rowdies", sans-serif;
+  font-weight: 100;
+  font-size: 6rem;
+  font-style: normal;
+  background: linear-gradient(to right, #dfdbdb, #215599);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  height: 3.5rem;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.2rem solid rgb(141, 132, 132);
+}
+header ul.menucha {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 2.5rem;
+  font-family: "Big Shoulders Text", sans-serif;
+  box-sizing: border-box;
+}
+header ul.menucha li > a {
+  padding: 0.2rem 1.8rem;
+  position: relative;
+}
+header ul.menucha li > a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.2rem;
+  border-bottom: 0.2rem solid white;
+  transition: width 0.3s linear;
+}
+
+header ul.menucha li:hover > a::after {
+  width: 100%;
+}
+header ul.menucha li:hover {
+  background: linear-gradient(to right, #444, #3b3d66);
+  transform: scale(1.07);
+  z-index: 10;
+}
+header ul.menucha > li {
+  position: relative;
+  transition: 0.4s;
+  transform: scale(1);
+}
+header ul.menucha > li a i {
+  margin-left: 1rem;
+}
+header ul.menucha li .menucon {
+  width: max-content;
+  position: absolute;
+  padding-top: 1rem;
+  transition: 0.4s;
+  height: 0;
+  overflow: hidden;
+}
+
+header ul.menucha li .menucon li {
+  background-color: rgb(99, 58, 58);
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+  padding-right: 5rem;
+}
+
+header ul.menucha li:hover .menucon {
+  height: 30rem;
+}
+
+.timkiem {
+  align-items: center;
+  display: flex;
+  height: 2.5rem;
+  border: 0.2rem solid rgb(255, 255, 255);
+  justify-content: space-around;
+  border-radius: 0.5rem;
+}
+input {
+  font-size: 2rem;
+  background-color: rgba(128, 128, 128, 0);
+  border: none;
+  width: 80%;
+  color: white;
+}
+input:focus {
+  outline: 0;
+}
+.timkiem button {
+  background-color: rgba(255, 222, 173, 0);
+  border: none;
+}
+button i {
+  color: rgb(255, 255, 255);
+  font-size: 2.2rem;
+}
+.HeMTXoay {
+  height: 120rem;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.MatTroi {
+  width: 100%;
+  height: 100%;
+  border-radius: 72px;
+  position: absolute;
+  background-image: url("../IMAGES/MT.png");
+  background-size: 144px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@keyframes KimXoay {
+  from {
+    transform: rotate(0deg) translatey(-200px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-200px) rotate(-360deg);
+  }
+}
+div.hop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.Kim {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #f5f9be;
+  position: absolute;
+  animation: KimXoay 4.25s infinite linear;
+  z-index: 200;
+}
+.DaiKim {
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  border: solid 1px #444;
+}
+
+@keyframes TDXoay {
+  from {
+    transform: rotate(0deg) translatey(-280px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-280px) rotate(-360deg);
+  }
+}
+
+.TraiDat {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: #4b94f9;
+  position: absolute;
+  animation: TDXoay 5.65s infinite linear;
+  z-index: 200;
+}
+
+.DaiTD {
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  border: solid 1px #444;
+}
+@keyframes BeMatTD {
+  from {
+    transform: rotate(0deg) translatey(-7px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-7px) rotate(-360deg);
+  }
+}
+
+.MatDat {
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1.5px;
+  animation: BeMatTD 2.27s infinite linear;
+}
+
+@keyframes HoaXoay {
+  from {
+    transform: rotate(0deg) translatey(-350px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-350px) rotate(-360deg);
+  }
+}
+
+.Hoa {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #dd411a;
+  position: absolute;
+  animation: HoaXoay 8.87s infinite linear;
+  z-index: 200;
+}
+
+.DaiHoa {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  border: solid 1px #444;
+}
+
+@keyframes MocXoay {
+  from {
+    transform: rotate(0deg) translatey(-440px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-440px) rotate(-360deg);
+  }
+}
+
+.Moc {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #eaad3b;
+  position: absolute;
+  animation: MocXoay 40s infinite linear;
+  z-index: 200;
+  background-image: repeating-linear-gradient(
+    6deg,
+    #797663 22px,
+    #e1dcde 16px,
+    #c3a992 30px,
+    #e9ece2 30px
+  );
+}
+
+.DaiMoc {
+  width: 880px;
+  height: 880px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  border: solid 1px #444;
+}
+@keyframes MatMoc {
+  from {
+    transform: rotate(0deg) translatey(-39px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-39px) rotate(-360deg);
+  }
+}
+
+.MatMoc {
+  animation: MatMoc 2.2s infinite linear;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+}
+
+.BosungMoc {
+  position: absolute;
+  width: 16px;
+  height: 12px;
+  border-radius: 8px / 6px;
+  top: 45px;
+  left: 50%;
+  background-color: #bc833b;
+  /* box-shadow: 0px 0px 5px #e1dcde; */
+  /* border: solid 1px #e1dcde; */
+  z-index: 300;
+}
+@keyframes ThoXoay {
+  from {
+    transform: rotate(0deg) translatey(-505px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-505px) rotate(-360deg);
+  }
+}
+.Tho {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #d6cd93;
+  position: absolute;
+  animation: ThoXoay 82s infinite linear;
+
+  z-index: 200;
+}
+
+.DaiTho {
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  border: solid 1px #444;
+}
+div[class$="-tho"] {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.7;
+
+  transform: rotatex(45deg);
+}
+
+.b-tho {
+  border: solid 5px #96866f;
+  width: 90px;
+  height: 90px;
+  margin: -50px;
+}
+
+.c-tho {
+  border: solid 10px #554c3c;
+  width: 104px;
+  height: 104px;
+  margin: -62px;
+}
+
+.d-tho {
+  border: solid 9px #574f4a;
+  width: 95px;
+  height: 95px;
+  margin: -56.5px;
+}
+
+.a-tho {
+  border: solid 2px #908e8d;
+  width: 133px;
+  height: 133px;
+  margin: -68.5px;
+}
+
+@keyframes ThienXoay {
+  from {
+    transform: rotate(0deg) translatey(-600px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translatey(-600px) rotate(-360deg);
+  }
+}
+.Thien {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #bfeef2;
+  position: absolute;
+  animation: ThienXoay 52s infinite linear;
+  z-index: 200;
+}
+
+.DaiThien {
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  z-index: 100;
+  position: absolute;
+  border: solid 1px #444;
+}
+.e-tho {
+  border: 5rem solid #908e8d;
+  width: 30px;
+  height: 30px;
+  margin: -6.5rem;
+  transform: rotatex(0deg) rotatey(89deg) !important;
+}
+@keyframes muiten {
+  from {
+    transform: translatey(3rem);
+  }
+  to {
+    transform: translatey(5rem);
+  }
+}
+.fa-solid.fa-angles-down {
+  animation: muiten 1.5s infinite linear;
+  font-size: 4.5rem;
+  background: linear-gradient(to top, #e6700f, #aac41a);
+  background-clip: text;
+  color: transparent;
+  margin-left: 65rem;
+}
+.HMT H3 {
+  color: bisque;
+  text-shadow: 0.5rem 0.1rem 0.3rem rgb(105, 103, 103);
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 10rem;
+}
+main .heMT {
+  background-image: url(../IMAGES/bgrhh_02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .hanhtinh {
+  display: flex;
+  font-size: 2.5rem;
+  margin-top: 6rem !important;
+  border-radius: 10rem;
+}
+main .hanhtinh:hover {
+  background: linear-gradient(#3d5375, #77a2aabe, #a2a4a7, #848b8f);
+}
+main .hanhtinh img {
+  height: 20rem;
+  width: auto;
+}
+main .hanhtinh .dai {
+  height: 30rem;
+  width: auto;
+}
+main .hanhtinh h2 {
+  border-bottom: 2px solid white;
+  width: 20rem;
+  color: rgb(132, 235, 235);
+  text-shadow: 4px 0px 4px grey;
+}
+main .hanhtinh p {
+  color: white;
+  max-width: 55rem;
+  text-align: center;
+  font-family: courier;
+}
+
+main .hanhtinh p a {
+  color: rgb(170, 245, 245);
+}
+main .hanhtinh:nth-child(1) {
+  margin-left: 2rem;
+}
+
+main .hanhtinh:nth-child(2) {
+  margin: 5rem 0 0 25rem;
+}
+main .hanhtinh:nth-child(3) {
+  margin: 5rem 0 0 45rem;
+}
+main .hanhtinh:nth-child(4) {
+  margin: 8rem 0 0 55rem;
+}
+main .hanhtinh:nth-child(5) {
+  margin: 8rem 0 0 55rem;
+}
+main .hanhtinh:nth-child(6) {
+  margin: 3rem 0 0 45rem;
+}
+main .hanhtinh:nth-child(7) {
+  margin: 3rem 0 0 25rem;
+}
+main .hanhtinh:nth-child(8) {
+  margin: 2rem 0 0 2rem;
+}
+
+footer {
+  background-image: url(../IMAGES/header02.jpg);
+  background-size: cover;
+  height: max-content;
+  font-size: 2.5rem;
+}
+footer section {
+  background-color: #0000009f;
+}
+footer .bocfooter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer section > div {
+  flex: 1 0 20rem;
+  display: flex;
+}
+footer h2 {
+  text-align: center;
+  padding-top: 5rem;
+  color: rgb(206, 185, 180);
+}
+.bocfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  gap: 10rem;
+}
+
+footer img {
+  width: 29.8rem;
+  height: 25.3rem;
+}
+footer h5 {
+  color: rgb(255, 252, 239);
+}
+footer .cot2 {
+  line-height: 5rem;
+}
+footer .cot2 i {
+  color: rgb(253, 253, 252);
+  margin-right: 0.5em;
+}
+
+.cot3 li {
+  color: rgb(255, 253, 253);
+  line-height: 5rem;
+}
+.cuoicung {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cuoicung > div {
+  flex: 1 0 10rem;
+}
+.banquyen p {
+  font-size: 1.3rem;
+  align-items: self-end;
+  text-align: center;
+  color: white;
+  background-color: #444;
+  padding: 0.2rem 0;
+}
