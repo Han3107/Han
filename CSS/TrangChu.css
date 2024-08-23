@@ -15,7 +15,7 @@ html {
 }
 #boc {
   background-image: url(../IMAGES/new-amp-page-bg.jpg);
-  max-width: 150rem;
+  /* max-width: 150rem; */
   background-size: cover;
   margin: 0 auto;
   z-index: 100;
